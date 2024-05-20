@@ -66,7 +66,7 @@ get_header('new'); ?>
         <div class="d-flex flex-wrap tab-select" style="padding-bottom: 34px; border-bottom: .6px solid #B4B4B4;">
         <?php 
         $loop = new WP_Query(array(
-            'post_type' => 'package',
+            'post_type' => 'treatment',
             'posts_per_page' => -1,
             'post_parent' => 0,
             'order' => 'ASC',
