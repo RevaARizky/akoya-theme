@@ -290,6 +290,9 @@ const packageHandler = (packages, images) => {
         }
         if(package.price) {
             subtitle += ` IDR ${formatMoney(package.price)}`
+            if(package.additional_price) {
+                subtitle += ' ' + package.additional_price
+            }
         }
         jQuery('#package-detail .package-container').append(`
             <div class="tab-package" style="margin-bottom: 30px;">

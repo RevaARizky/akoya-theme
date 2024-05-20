@@ -112,6 +112,7 @@ function getPackageV2() {
 				'title' => get_the_title(),
 				'duration' => get_field('duration') ? get_field('duration') : '',
 				'price' => get_field('price') ? get_field('price') : '',
+				'additional_price' => get_field('additional_price') ? get_field('additional_price') : '',
 				'toHour' => get_field('to_hour'),
 				'description' => get_field('description'),
 				'cta' => get_field('use_cta')
@@ -232,7 +233,7 @@ add_action('init', function() {
 	));
 	register_post_type('discount', array(
 		'label' => 'Discounts',
-		'public' => true,
+		'public' => false,
 		'hierarchical' => true,
 		'supports' => array('custom-fields', 'title', 'editor', 'page-attributes')
 	));
