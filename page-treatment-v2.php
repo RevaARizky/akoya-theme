@@ -284,6 +284,8 @@ const packageHandler = (packages, images) => {
                 } else {
                     subtitle += `(${hour} Hours ${hour % 1 *60} Minutes)`
                 }
+            } else {
+                subtitle += `(${package.duration} mins)`
             }
         }
         if(package.price) {
