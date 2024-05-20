@@ -177,6 +177,6 @@ add_action('init', function() {
 		'label' => 'Treatments',
 		'public' => true,
 		'hierarchical' => true,
-		'supports' => array('custom-fields', 'title', 'editor')
+		'supports' => array('custom-fields', 'title', 'editor', 'page-attributes')
 	));
 });
