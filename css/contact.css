@@ -1,0 +1,32 @@
+#header {
+    backdrop-filter: blur(15px);
+    background-color: rgba(255, 237, 219, 0.4);
+}
+form p {
+    display: block;
+    width: 100%;
+    max-width: none!important;
+    margin-bottom: 0;
+}
+
+@media(max-width: 768px) {
+    .fs-h1 {
+        font-size: 34px!important;
+    }
+}
+
+.wpcf7-form-control.wpcf7-submit {
+    background-color: #BF9270;
+}
+
+@media(min-width: 1024px) {
+    .form-wrapper .image-wrapper img {
+        height: 800px;
+    }
+}
+
+@media(max-width: 768px) {
+    .form-wrapper .image-wrapper img {
+        border-radius: 6px;
+    }
+}

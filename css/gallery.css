@@ -1,0 +1,25 @@
+.gallery-container {
+    --column-gap: 20px; 
+    --col-count: 3; 
+    --mobile-gap: 10px;
+}
+
+.image-wrapper img {
+    border-radius: 6px;
+    width: 100%;
+}
+
+@media(min-width: 1024px) {
+    .gallery-container {
+        gap: 20px; 
+    }
+}
+
+@media(max-width: 1023px) {
+    .gallery-container {
+        gap: 10px;
+    }
+    .col-mobile-6 {
+        flex: 0 0 calc(50% - var(--mobile-gap) / 2);
+    }
+}

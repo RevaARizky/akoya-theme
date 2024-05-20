@@ -1,0 +1,28 @@
+
+@media(min-width: 769px) {
+    #package-detail .image-container {
+        flex: 1 0 330px;
+    }
+    #package-detail .package-container {
+        flex: 0 1 100%;
+    }
+}
+@media(max-width: 768px) {
+    #intro-text {
+        padding-top: 120px!important;
+    }
+    #package-detail .image-container {
+        flex: 1 0 100%;
+    }
+    #package-detail .package-container {
+        flex: 0 1 100%;
+    }
+    #intro-text .page-title > * {
+        font-size: 24px!important;
+    }
+
+    #box-wrapper .box {
+        min-height: 157px;
+        padding: 0!important;
+    }
+}

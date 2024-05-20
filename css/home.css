@@ -1,0 +1,58 @@
+#header {
+    background-color: rgba(255, 237, 219, 0.4);
+    backdrop-filter: blur(15px);
+}
+
+.hero-header {
+    background: rgba(44, 44, 44, 0.2);; 
+    background-position: center; 
+    background-size: cover; 
+    height: 100vh;
+}
+
+.hero-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(44, 44, 44, 0.2);
+}
+
+@media(max-width: 768px) {
+    .hero-header{
+        height: 65vh;
+    }
+}
+
+#appointment.bg-mask {
+    background-image: url(https://www.akoyaspabali.com/wp-content/uploads/2023/05/mask_an_appointment.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.bg-black-before::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, #000000 -46.13%, rgba(0, 0, 0, 0) 86.44%);
+    z-index: -1;
+}
+
+@media( max-width: 768px  ) {
+    .bg-black-before::before {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    }
+    .owl-stage {
+        padding-left: 0!important;
+    }
+    .fs-h1 {
+        font-size: 24px!important;
+    }
+    .fs-p3 {
+        font-size: 14px!important;
+    }
+}
