@@ -224,6 +224,32 @@ get_header('new'); ?>
 
 <script>
 
+
+const formatMoney = (amount, decimalCount = 0, decimal = ".", thousands = ",") => {
+  try {
+    decimalCount = Math.abs(decimalCount);
+    decimalCount = isNaN(decimalCount) ? 2 : decimalCount;
+
+    const negativeSign = amount < 0 ? "-" : "";
+
+    let i = parseInt(amount = Math.abs(Number(amount) || 0).toFixed(decimalCount)).toString();
+    let j = (i.length > 3) ? i.length % 3 : 0;
+
+    return negativeSign +
+      (j ? i.substr(0, j) + thousands : '') +
+      i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) +
+      (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
+  } catch (e) {
+    console.log(e)
+  }
+};
+
+Number.isInteger = Number.isInteger || function(value) {
+  return typeof value === 'number' && 
+    isFinite(value) && 
+    Math.floor(value) === value;
+};
+
 const imageHandler = images => {
     jQuery('#package-detail .image-container').empty()
     console.log(images)
@@ -236,6 +262,8 @@ const imageHandler = images => {
     })
 }
 
+
+
 const packageHandler = (packages, images) => {
     jQuery('#package-detail .package-container').empty()
     let i = 0
@@ -247,6 +275,20 @@ const packageHandler = (packages, images) => {
         } else {
             image = ''
         }
+        var subtitle = ''
+        if(package.duration) {
+            if(package.toHour) {
+                var hour = package.duration / 60
+                if(Number.isInteger(hour)) {
+                    subtitle += `(${hour} Hours)`
+                } else {
+                    subtitle += `(${hour} Hours ${hour % 1 *60} Minutes)`
+                }
+            }
+        }
+        if(package.price) {
+            subtitle += ` IDR ${formatMoney(package.price)}`
+        }
         jQuery('#package-detail .package-container').append(`
             <div class="tab-package" style="margin-bottom: 30px;">
                 ${image}
@@ -254,7 +296,7 @@ const packageHandler = (packages, images) => {
                     <p class="fst-italic mb-0" style="font-size: 22px!important; font-weight: 400;">${package.title}</p>
                 </div>
                 <div class="tab-subtitle" style="padding-bottom: 12px; border-bottom: .6px solid black; margin-bottom: 20px;">
-                    <p class="fst-italic mb-0" style="font-size: 18px!important; font-weight: 600;">${package.subtitle}</p>
+                    <p class="fst-italic mb-0" style="font-size: 18px!important; font-weight: 600;">${subtitle}</p>
                 </div>
                 <div class="tab-description mb-4">
                     ${package.description}
