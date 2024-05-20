@@ -83,6 +83,55 @@ add_action('wp_ajax_getPackage', 'getPackage');
 add_action('wp_ajax_nopriv_getPackage', 'getPackage');
 
 
+function getPackageV2() {
+	$id = $_POST['id'];
+	$args = array(
+		'post_type' => 'treatment',
+		'posts_per_page' => -1,
+		'post_parent' => $id,
+	);
+
+	$loop = new WP_Query($args);
+	$res = array();
+	if(get_field('image_gallery', $id)) {
+		$image = array();
+		foreach(get_field('image_gallery', $id) as $image) {
+			array_push($image, wp_get_attachment_url($image['image'], 'full'));
+		}
+		$res['image'] = $image;
+	}
+
+
+	if($loop->have_posts()) {
+		$package = array();
+		while($loop->have_posts()) { 
+			$loop->the_post();
+			array_push($package, array(
+				'parentId' => $id,
+				'id' => get_the_id(),
+				'title' => get_the_title(),
+				'duration' => get_field('duration') ? get_field('duration') : '',
+				'price' => get_field('price') ? get_field('price') : '',
+				'toHour' => get_field('to_hour'),
+				'description' => get_field('description'),
+				'cta' => get_field('use_cta')
+			));
+			// 'parentId' => $id,
+			// 'id' => get_sub_field_object('title')['name'],
+			// 'title' => get_sub_field('title'),
+			// 'subtitle' => get_sub_field('subtitle'),
+			// 'description' => get_sub_field('description'),
+			// 'titleurl' => rawurlencode(get_sub_field('title')),
+			// 'subtitleurl' => rawurlencode(get_sub_field('subtitle')),
+		}
+		$res['package'] = $package;
+	}
+}
+
+add_action('wp_ajax_getPackage_v2', 'getPackageV2');
+add_action('wp_ajax_nopriv_getPackage_v2', 'getPackageV2');
+
+
 function getFusion() {
 
 	$id = $_POST['id'];
@@ -175,6 +224,12 @@ function store_cf7_data_in_cookie( $contact_form ) {
 add_action('init', function() {
 	register_post_type('treatment', array(
 		'label' => 'Treatments',
+		'public' => true,
+		'hierarchical' => true,
+		'supports' => array('custom-fields', 'title', 'editor', 'page-attributes')
+	));
+	register_post_type('discount', array(
+		'label' => 'Discounts',
 		'public' => true,
 		'hierarchical' => true,
 		'supports' => array('custom-fields', 'title', 'editor', 'page-attributes')
