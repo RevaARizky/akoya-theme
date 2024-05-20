@@ -277,6 +277,7 @@ const ajaxCall = (id, target) => {
         },
         success: res => {
             let data = JSON.parse(res)
+            console.log(data)
             jQuery(target).addClass('active')
             jQuery('.package-title h2').text(jQuery(target).text())
             imageHandler(data.image)

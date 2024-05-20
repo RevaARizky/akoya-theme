@@ -126,6 +126,8 @@ function getPackageV2() {
 		}
 		$res['package'] = $package;
 	}
+	echo json_encode($res);
+	wp_die();
 }
 
 add_action('wp_ajax_getPackage_v2', 'getPackageV2');
