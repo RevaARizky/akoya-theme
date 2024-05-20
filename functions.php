@@ -94,11 +94,11 @@ function getPackageV2() {
 	$loop = new WP_Query($args);
 	$res = array();
 	if(get_field('image_gallery', $id)) {
-		$image = array();
+		$gallery = array();
 		foreach(get_field('image_gallery', $id) as $image) {
-			array_push($image, wp_get_attachment_url($image['image'], 'full'));
+			array_push($gallery, wp_get_attachment_url($image['image'], 'full'));
 		}
-		$res['image'] = $image;
+		$res['image'] = $gallery;
 	}
 
 
