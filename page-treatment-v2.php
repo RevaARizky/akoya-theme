@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Treatment Page
+ * Template Name: Treatment Page V2
  * 
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
