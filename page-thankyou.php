@@ -59,12 +59,43 @@
             <div class="d-flex justify-content-start mb-3">
                 <div class="label"><p class="mb-0" style="color: #707070;">Service Booked</p></div>
             </div>
+            <?php if(isset($_POST['promo-code'])) {
+                $loop = new WP_Query(array(
+                    'post_type' => 'discount',
+                    'name' => $_POST['promo-code']
+                ));
+                $discountItem = false;
+                if($loop->have_posts()) {
+                    while($loop->have_posts()){
+                        $loop->the_post();
+                        
+                        $discountItem = array('id' => get_field('treatment', get_the_id()), 'price' => get_field('price_to', get_the_id()));
+                    }
+                }
+            } ?>
             <?php foreach($_POST['treatpack'] as $treatment) : ?>
+                <?php 
+                $args = array(
+                    'post_type' => 'treatment',
+                    'p' => $treatment,
+                ); 
+
+                $loop = new WP_Query($args);
+
+                if($loop->have_posts()) :
+                    while($loop->have_posts()) :
+                        $loop->the_post();
+                        $price = get_field('price', get_the_id());
+                        if($discountItem && $discountItem['id'] == get_the_id()) {
+                            $price = '<del>' . get_field('price', get_the_id()) . '</del>' . $discountItem['price'];
+                        }
+                ?>
             <div class="d-flex justify-content-between mb-2">
-                    <?php $value = explode('|', $treatment) ?>
-                <div class="label"><p class="mb-0" style="color: #000; font-size: 18px; font-weight: 600;"><?= $value[0] ?></p></div>
-                <div class="value"><p class="mb-0" style="color: #000; font-size: 18px; font-weight: 600;"><?= $value[1] ?></div>
+                <div class="label"><p class="mb-0" style="color: #000; font-size: 18px; font-weight: 600;"><?= get_the_title() ?></p></div>
+                <div class="value"><p class="mb-0" style="color: #000; font-size: 18px; font-weight: 600;">(<?= get_field('duration', get_the_id()) ?> mins) IDR <?= $price ?> </div>
             </div>
+            <?php endwhile; ?>
+            <?php endif; ?>
             <?php endforeach; ?>
         </div>
     </div>
