@@ -14,8 +14,16 @@
 } ?>
 
 <?php
-
-    
+$check = _is_email_exists($_POST['email']);
+if(!$check) {
+    $insert = wp_insert_post(array(
+        'post_type' => 'email_list',
+        'post_title' => $_POST['email'],
+        'meta_input' => array(
+            '_email_user' => $_POST['email']
+        )
+    ));
+}
 ?>
 
 <style>
@@ -85,9 +93,9 @@
                 if($loop->have_posts()) :
                     while($loop->have_posts()) :
                         $loop->the_post();
-                        $price = get_field('price', get_the_id());
+                        $price = number_format(get_field('price', get_the_id()));
                         if($discountItem && $discountItem['id'] == get_the_id()) {
-                            $price = '<del>' . get_field('price', get_the_id()) . '</del>' . $discountItem['price'];
+                            $price = '<del>' . number_format(get_field('price', get_the_id())) . '</del>' . number_format($discountItem['price']);
                         }
                 ?>
             <div class="d-flex justify-content-between mb-2">

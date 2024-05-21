@@ -238,4 +238,39 @@ add_action('init', function() {
 		'supports' => array('custom-fields', 'title', 'editor', 'page-attributes'),
 		'show_ui' => true
 	));
+	register_post_type('email_list', array(
+		'label' => 'Email List',
+		'public' => true,
+		'hierarchical' => true,
+		'supports' => array('custom-fields', 'title', 'editor', 'page-attributes'),
+		'show_ui' => true
+	));
 });
+
+
+function _is_email_exists($email) {
+	$args = array(
+		'post_type' => 'email_list',
+		'meta_key' => '_email_user',
+		'meta_value' => $email
+	);
+	
+	$check = new WP_Query($args);
+
+	return $check->have_posts();
+}
+
+
+
+function checkEmail() {
+
+	$res = array(
+		'status' => 200,
+		'exists' => _is_email_exists($_POST['email'])
+	);
+    echo json_encode($res);
+	wp_die();
+}
+
+add_action('wp_ajax_checkUserEmail', 'checkEmail');
+add_action('wp_ajax_nopriv_checkUserEmail', 'checkEmail');

@@ -9,12 +9,6 @@
 get_header('new'); 
 wp_enqueue_style('contact-css', get_template_directory_uri() . '/css/contact.css', array(), NULL);?>
 
-
-
-<style>
-    
-</style>
-
 <main id="primary">
     <section class="outer-wrapper mb-60">
         <?php if(get_field('heading_image')) : ?>
