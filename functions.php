@@ -233,7 +233,7 @@ add_action('init', function() {
 	));
 	register_post_type('discount', array(
 		'label' => 'Discounts',
-		'public' => false,
+		'public' => true,
 		'hierarchical' => true,
 		'supports' => array('custom-fields', 'title', 'editor', 'page-attributes'),
 		'show_ui' => true
