@@ -330,6 +330,9 @@ jQuery('main#primary').on('click', '.post-button', function(e) {
     parentTreatment.setAttribute("type", "hidden");
     parentTreatment.setAttribute("name", "parentid");
     parentTreatment.setAttribute("value", that.data('parentid'));
+    parentTreatment.setAttribute("type", "hidden");
+    parentTreatment.setAttribute("name", "version");
+    parentTreatment.setAttribute("value", '1');
     form.setAttribute('method', 'post');
     form.setAttribute('action', '/new-reservation');
     // form.setAttribute('action', '/reservations');
