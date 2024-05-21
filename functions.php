@@ -235,6 +235,7 @@ add_action('init', function() {
 		'label' => 'Discounts',
 		'public' => false,
 		'hierarchical' => true,
-		'supports' => array('custom-fields', 'title', 'editor', 'page-attributes')
+		'supports' => array('custom-fields', 'title', 'editor', 'page-attributes'),
+		'show_ui' => true
 	));
 });
