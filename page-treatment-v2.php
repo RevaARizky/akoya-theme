@@ -379,9 +379,10 @@ jQuery('main#primary').on('click', '.post-button', function(e) {
     parentTreatment.setAttribute("type", "hidden");
     parentTreatment.setAttribute("name", "ak_parentid");
     parentTreatment.setAttribute("value", that.data('parentid'));
-    parentTreatment.setAttribute("type", "hidden");
-    parentTreatment.setAttribute("name", "version");
-    parentTreatment.setAttribute("value", '2');
+    var versionTreatment = document.createElement('input')
+    versionTreatment.setAttribute("type", "hidden");
+    versionTreatment.setAttribute("name", "version");
+    versionTreatment.setAttribute("value", '2');
     form.setAttribute('method', 'post');
     form.setAttribute('action', '/new-reservation');
     // form.setAttribute('action', '/reservations');
@@ -390,6 +391,7 @@ jQuery('main#primary').on('click', '.post-button', function(e) {
     form.appendChild(inputTreatment);
     form.appendChild(idTreatment);
     form.appendChild(parentTreatment);
+    form.appendChild(versionTreatment);
     document.body.appendChild(form);
     form.submit();
     return false;
