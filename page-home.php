@@ -20,9 +20,9 @@ wp_enqueue_style('home-css', get_template_directory_uri() . '/css/home.css', arr
             <p class="fs-p3" style="margin-bottom: 8px; font-weight: 400; letter-spacing: 6px;">AKOYA SPA</p>
         <?php endif; ?>
         <?php if(get_field('heading_page')) : ?>
-            <h1 class="fs-h1">BLISFULL OASIS<br>OF TRANQUILITY AWAITS</h1>
+            <h1 class="fs-h1">BLISSFUL OASIS<br>OF TRANQUILITY AWAITS</h1>
         <?php else : ?>
-            <h1 class="fs-h1">BLISFULL OASIS<br>OF TRANQUILITY AWAITS</h1>
+            <h1 class="fs-h1">BLISSFUL OASIS<br>OF TRANQUILITY AWAITS</h1>
         <?php endif; ?>
     </div>
     <div class="video-header-wrapper">
@@ -73,67 +73,7 @@ wp_enqueue_style('home-css', get_template_directory_uri() . '/css/home.css', arr
         </div>
     </div>
 </div>
-<hr>
-<!-- Promotional -->
-<div class="container py-section">
-    <div class="d-flex flex-mobile-wrap" style="column-gap: 20px;">
-        <!--div class="col-lg-8 col-12 order-1 order-lg-0">
-            <div class="image-wrapper w-100 position-relative" style="padding-top: 100%;">
-            <img src="https://www.akoyaspabali.com/wp-content/uploads/2024/05/akoya-spa-reflexology.webp" class="img-fluid position-absolute h-100" style="inset: 0; object-fit: cover;" alt="">
-            </div>
-        </div-->
-		 <div class="col-lg-6 col-12 order-0 order-lg-1 mb-5 mb-lg-0 px-2 pb-2" style="border: solid 1px #ddd">
-			 <div class="image-wrapper w-100 position-relative" style="padding-top:5px">
-            <img src="https://www.akoyaspabali.com/wp-content/uploads/2024/05/reflexology-promo.webp" class="img-fluid"  alt="Akoya Spa - Reflexology">
-            </div>
-            <div class="title-wrapper" style="margin-bottom: 20px;">
-                <h4 class="mb-0 text-center" style="font-size: 36px!important; font-weight: 500;">Exclusive Offers for New Customers!</h4>
-            </div>
-            <div class="content-wrapper" style="margin-bottom: 42px;">
-				<p class="mb-0" style="font-size: 16px!important; font-weight: 400;">We understand the unique challenges Bali's stunning landscapes and sunshine can present. Whether it's dullness from the sun or fatigue from exploration, we're here to help you stay refreshed and radiant.</p><br>
-<strong>Here's your exclusive welcome offer:</strong>
-	<ul style="list-style-type: circle;"><li>Free 30-Minute Express Facial or Reflexology</li>
-		<li>Minimum spend of IDR 1,000,000 (or 850k++) on other treatments.</li>
-		<li>Free Massage Upgrade</li>
-		<li>Book a 60-minute massage and enjoy a free upgrade to 90 minutes.</li>
-	</ul>
-<strong>Terms &amp; Conditions:</strong>
-<ul style="list-style-type: circle;">	<li>This offer cannot be combined with other promotions.</li>
-	<li>Valid for new guests only.</li>
-	<li>Promotion is valid from January to December 2024.</li></ul>
-            </div>
-            <div class="btn-wrapper  text-center">
-                <a href="/new-reservation/" class="d-inline-flex" style="padding: 10px 24px 10px 24px; background-color: #7e5230; border-radius: 6px; font-size: 17px; font-weight: 500; color:#ffffff;"><span style="margin-right: 10px;">Book Now</span> <img src="https://www.akoyaspabali.com/wp-content/uploads/2023/05/right_arrow.svg" alt="Book Now" width="12" height="9" class="img-fluid"></a>
-            </div>
-        </div>
-        <div class="col-lg-6 col-12 order-0 order-lg-1 mb-5 mb-lg-0 px-2 pb-2" style="border: solid 1px #ddd">
-			 <div class="image-wrapper w-100 position-relative" style="padding-top:5px">
-            <img src="https://www.akoyaspabali.com/wp-content/uploads/2024/05/massage-balinese-promo.webp" class="img-fluid"  alt="Akoya Spa - Balinese Massage">
-            </div>
-            <div class="title-wrapper" style="margin-bottom: 20px;">
-                <h4 class="mb-0 text-center" style="font-size: 36px!important; font-weight: 500;">Spread the Love with Akoya Spa!</h4>
-            </div>
-            <div class="content-wrapper" style="margin-bottom: 42px;">
-			<strong>Refer friends using the code 'AKOYA2024' to receive:</strong>
-	<ol Style="list-style-type: alpha;"><li>Both you and your friend get 20% off any treatments.</li>
-		<li>Refer 3 friends to get a free 30-minute Balinese massage, reflexology, or facial.</li>
-	</ol>
-<strong>Terms &amp; Conditions:</strong>
-<ul style="list-style-type: circle;">	<li>Refer as many friends as possible to earn more discounts on your next treatments.</li>
-<li>A reward will be credited to both the referrer and the recipient's account once the Referral Code is successfully entered during registration.</li>
-<li>To redeem rewards, they must be applied to any purchase transaction with a minimum of IDR 1,000,000 (price before discount) under a receipt.</li>
-<li>Rewards are valid for all items at normal prices.</li>
-<li>The validity period of rewards is 30 days from the date of issue.</li>
-<li>Rewards cannot be combined with any other promotions.</li>
-<li>This offer is valid for new and existing members.</li></ul>
-            </div>
-            <div class="btn-wrapper text-center">
-                <a href="/new-reservation/" class="d-inline-flex" style="padding: 10px 24px 10px 24px; background-color: #7e5230; border-radius: 6px; font-size: 17px; font-weight: 500; color:#ffffff;"><span style="margin-right: 10px;">Refer Friends Now</span> <img src="https://www.akoyaspabali.com/wp-content/uploads/2023/05/right_arrow.svg" alt="Book Now" width="12" height="9" class="img-fluid"></a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- end promotional-->
+<!-- our treatment -->
 
 <div class="outer-wrapper" style="background-color: #FFEDDB; padding-bottom: 160px; padding-top: 92px;">
     <div class="container bg-transparent">
@@ -185,7 +125,7 @@ wp_enqueue_style('home-css', get_template_directory_uri() . '/css/home.css', arr
                     <img src="https://www.akoyaspabali.com/wp-content/uploads/2023/05/spa_packages.jpg" class="img-fluid w-100" alt="">
                 </div>
                 <div class="title-wrapper text-center" style="margin-bottom: 40px;">
-                    <h4 style="font-size: 24px; font-weight: 500;">Massage</h4>
+                    <h4 style="font-size: 24px; font-weight: 500;">Massages</h4>
                 </div>
                 <!--div class="btn-wrapper text-center">
                     <a href="#" class="text-white" style="font-size: 12px; font-weight: 500; padding: 10px 24px 10px 24px; background-color: #BF9270; border-radius: 6px;">Discover More</a>
@@ -196,7 +136,7 @@ wp_enqueue_style('home-css', get_template_directory_uri() . '/css/home.css', arr
                     <img src="https://www.akoyaspabali.com/wp-content/uploads/2023/05/combination_packages.jpg" class="img-fluid w-100" alt="">
                 </div>
                 <div class="title-wrapper text-center" style="margin-bottom: 40px;">
-                    <h4 style="font-size: 24px; font-weight: 500;">Hair Treatment</h4>
+                    <h4 style="font-size: 24px; font-weight: 500;">Hair Treatments</h4>
                 </div>
                 <!--div class="btn-wrapper text-center">
                     <a href="#" class="text-white" style="font-size: 12px; font-weight: 500; padding: 10px 24px 10px 24px; background-color: #BF9270; border-radius: 6px;">Discover More</a>
@@ -212,6 +152,67 @@ wp_enqueue_style('home-css', get_template_directory_uri() . '/css/home.css', arr
     </div>
 </div>
 
+<!-- Promotional -->
+<div class="container py-section">
+    <div class="d-flex flex-mobile-wrap" style="column-gap: 20px;">
+        <!--div class="col-lg-8 col-12 order-1 order-lg-0">
+            <div class="image-wrapper w-100 position-relative" style="padding-top: 100%;">
+            <img src="https://www.akoyaspabali.com/wp-content/uploads/2024/05/akoya-spa-reflexology.webp" class="img-fluid position-absolute h-100" style="inset: 0; object-fit: cover;" alt="">
+            </div>
+        </div-->
+		 <div class="col-lg-6 col-12 order-0 order-lg-1 mb-5 mb-lg-0 px-2 pb-2" style="border: solid 1px #ddd">
+			 <div class="image-wrapper w-100 position-relative" style="padding-top:5px; margin-bottom:30px;">
+            <img src="https://www.akoyaspabali.com/wp-content/uploads/2024/05/akoya-spa-reception-promo.webp" class="img-fluid"  alt="Akoya Spa - Reflexology">
+            </div>
+            <div class="title-wrapper" style="margin-bottom: 20px;">
+                <h4 class="mb-0 text-center" style="font-size: 36px!important; font-weight: 500;">Exclusive Offers for New Customers!</h4>
+            </div>
+            <div class="content-wrapper" style="margin-bottom: 42px;">
+				<p class="mb-0" style="font-size: 16px!important; font-weight: 400;">We understand the unique challenges Bali's stunning landscapes and sunshine can present. Whether it's dullness from the sun or fatigue from exploration, we're here to help you stay refreshed and radiant.</p><br>
+<strong>Here's your exclusive welcome offer:</strong>
+	<ul style="list-style-type: circle;">
+		<li>Free 30-Minute Express Facial or Reflexology for spending equal or above IDR 1 million</li>
+		<li>Free upgrade 90 minutes treatment for 60 minutes traditional balinese massage booking</li>
+	</ul>
+<strong>Terms &amp; Conditions:</strong>
+<ul style="list-style-type: circle;">	<li>This offer cannot be combined with other promotions.</li>
+	<li>Valid for new guests only.</li>
+	<li>Promotion is valid from January to December 2024.</li></ul>
+            </div>
+            <div class="btn-wrapper  text-center">
+                <a href="/new-reservation/" class="d-inline-flex" style="padding: 10px 24px 10px 24px; background-color: #7e5230; border-radius: 6px; font-size: 17px; font-weight: 500; color:#ffffff;"><span style="margin-right: 10px;">Book Now</span> <img src="https://www.akoyaspabali.com/wp-content/uploads/2023/05/right_arrow.svg" alt="Book Now" width="12" height="9" class="img-fluid"></a>
+            </div>
+        </div>
+        <div class="col-lg-6 col-12 order-0 order-lg-1 mb-5 mb-lg-0 px-2 pb-2" style="border: solid 1px #ddd">
+			 <div class="image-wrapper w-100 position-relative" style="padding-top:5px;margin-bottom:30px;">
+            <img src="https://www.akoyaspabali.com/wp-content/uploads/2024/05/balinese-massage-promo.webp" class="img-fluid"  alt="Akoya Spa - Balinese Massage">
+            </div>
+            <div class="title-wrapper" style="margin-bottom: 20px;">
+                <h4 class="mb-0 text-center" style="font-size: 36px!important; font-weight: 500;">Spread the Love with Akoya Spa!</h4>
+            </div>
+            <div class="content-wrapper" style="margin-bottom: 42px;">
+			<strong>Refer friends using the code 'AKOYA2024' to receive:</strong>
+	<ol Style="list-style-type: alpha;"><li>Both you and your friend get 20% off any treatments.</li>
+		<li>Refer 3 friends to get a free 30-minute Balinese massage, reflexology, or facial.</li>
+	</ol>
+<strong>Terms &amp; Conditions:</strong>
+<ul style="list-style-type: circle;">	<li>Refer as many friends as possible to earn more discounts.</li>
+<li>The 20%  discount will be credited to both the referrer and the recipient's account once the Referral Code is successfully entered during registration.</li>
+<li>To redeem rewards, they must be applied to any purchase transaction with a minimum of IDR 1,000,000 (price before discount) under a receipt.</li>
+<!--li>Rewards are valid for all items at normal prices.</li-->
+<li>The validity period of rewards is 90 days from the date of issue.</li>
+<li>Rewards cannot be combined with any other promotions.</li>
+<li>This offer is valid for new and existing members.</li></ul>
+            </div>
+            <div class="btn-wrapper text-center">
+                <a href="/new-reservation/" class="d-inline-flex" style="padding: 10px 24px 10px 24px; background-color: #7e5230; border-radius: 6px; font-size: 17px; font-weight: 500; color:#ffffff;"><span style="margin-right: 10px;">Refer Friends Now</span> <img src="https://www.akoyaspabali.com/wp-content/uploads/2023/05/right_arrow.svg" alt="Book Now" width="12" height="9" class="img-fluid"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end promotional-->
+
+<hr>
 <div class="container py-section">
     <div class="d-flex align-items-center flex-mobile-wrap" style="column-gap: 120px;">
         <div class="col-lg-5 col-12 order-1 order-lg-0">
