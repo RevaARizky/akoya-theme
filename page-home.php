@@ -205,7 +205,7 @@ wp_enqueue_style('home-css', get_template_directory_uri() . '/css/home.css', arr
 <li>This offer is valid for new and existing members.</li></ul>
             </div>
             <div class="btn-wrapper text-center">
-                <a href="/new-reservation/" class="d-inline-flex" style="padding: 10px 24px 10px 24px; background-color: #7e5230; border-radius: 6px; font-size: 17px; font-weight: 500; color:#ffffff;"><span style="margin-right: 10px;">Refer Friends Now</span> <img src="https://www.akoyaspabali.com/wp-content/uploads/2023/05/right_arrow.svg" alt="Book Now" width="12" height="9" class="img-fluid"></a>
+                <a href="javascript:void(0)" id="refer-friend" class="d-inline-flex" style="padding: 10px 24px 10px 24px; background-color: #7e5230; border-radius: 6px; font-size: 17px; font-weight: 500; color:#ffffff;"><span style="margin-right: 10px;">Refer Friends Now</span> <img src="https://www.akoyaspabali.com/wp-content/uploads/2023/05/right_arrow.svg" alt="Book Now" width="12" height="9" class="img-fluid"></a>
             </div>
         </div>
     </div>
@@ -265,6 +265,12 @@ wp_enqueue_style('home-css', get_template_directory_uri() . '/css/home.css', arr
         </div>
     </div>
 </section>
+
+<?php 
+
+akoya_ref_popup_referral();
+
+?>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 

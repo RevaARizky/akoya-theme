@@ -246,31 +246,3 @@ add_action('init', function() {
 		'show_ui' => true
 	));
 });
-
-
-function _is_email_exists($email) {
-	$args = array(
-		'post_type' => 'email_list',
-		'meta_key' => '_email_user',
-		'meta_value' => $email
-	);
-	
-	$check = new WP_Query($args);
-
-	return $check->have_posts();
-}
-
-
-
-function checkEmail() {
-
-	$res = array(
-		'status' => 200,
-		'exists' => _is_email_exists($_POST['email'])
-	);
-    echo json_encode($res);
-	wp_die();
-}
-
-add_action('wp_ajax_checkUserEmail', 'checkEmail');
-add_action('wp_ajax_nopriv_checkUserEmail', 'checkEmail');

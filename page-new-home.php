@@ -416,6 +416,12 @@ wp_enqueue_style('home-css', get_template_directory_uri() . '/css/home.css', arr
 
 <script>
 
+<?php 
+
+echo akoya_ref_popup_referral();
+
+?>
+
 
 
 jQuery(document).ready($ => {

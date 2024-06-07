@@ -24,6 +24,8 @@ if(!$check) {
         )
     ));
 }
+
+do_action('akoya_referral_use_ref_code', );
 ?>
 
 <style>
